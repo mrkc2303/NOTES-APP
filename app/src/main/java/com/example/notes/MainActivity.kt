@@ -1,6 +1,7 @@
 package com.example.notes
 
 import android.os.Bundle
+import android.view.View
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -36,7 +37,7 @@ class MainActivity : AppCompatActivity(), INotesRVAdapter {
         Toast.makeText(this, "${note.text} Deleted", Toast.LENGTH_LONG).show()
     }
 
-    fun addData() {
+    fun addData(view: View) {
         val noteText = input.text.toString()
         if(noteText.isNotEmpty()){
             viewModel.insertNote(Note(noteText))
