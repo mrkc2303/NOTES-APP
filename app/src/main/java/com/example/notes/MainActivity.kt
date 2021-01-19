@@ -12,8 +12,8 @@ import androidx.recyclerview.widget.RecyclerView
 class MainActivity : AppCompatActivity(), INotesRVAdapter {
 
     private lateinit var viewModel: NoteViewModel
-    private var recyclerView: RecyclerView = findViewById<RecyclerView>(R.id.recyclerView)
-    private var input: EditText = findViewById<EditText>(R.id.etInput)
+    private var recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
+    private var input: EditText = findViewById(R.id.etInput)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
